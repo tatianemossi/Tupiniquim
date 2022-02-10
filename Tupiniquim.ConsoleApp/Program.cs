@@ -21,23 +21,23 @@ namespace Tupiniquim.ConsoleApp
             var limiteDeY1 = listaSuperiorDireito[2];
 
             Console.WriteLine("Digite a posição inicial do Robô 1 (Coordenada X + Y + Direção (N, S, L, O) separados por espaço. ex.: 0 0 N): ");
-            var posicaoInicial = Console.ReadLine();
+            var posicaoInicial = Console.ReadLine().ToUpper(); 
             char[] instrucoesPosicaoInicial = posicaoInicial.ToCharArray();
 
             while (instrucoesPosicaoInicial.Length != 5)
             {
                 Console.WriteLine("O formato inserido é inválido");
                 Console.WriteLine("Digite novamente a posição inicial do Robô 1 (Coordenada X + Y + Direção (N, S, L, O) separados por espaço. ex.: 0 0 N): ");
-                posicaoInicial = Console.ReadLine();
+                posicaoInicial = Console.ReadLine().ToUpper();
                 instrucoesPosicaoInicial = posicaoInicial.ToCharArray();
             }
 
             var x1 = Convert.ToInt32(instrucoesPosicaoInicial[0].ToString());
             var y1 = Convert.ToInt32(instrucoesPosicaoInicial[2].ToString());
-            var bussola1 = instrucoesPosicaoInicial[4].ToString();
+            var bussola1 = instrucoesPosicaoInicial[4].ToString().ToUpper();
 
             Console.WriteLine("Digite as instruções para o primeiro robô: ");
-            var instrucoesRobo1 = Console.ReadLine();            
+            var instrucoesRobo1 = Console.ReadLine().ToUpper();            
             char[] listaInstrucoesRobo1 = instrucoesRobo1.ToCharArray();            
 
             for (int i = 0; i < listaInstrucoesRobo1.Length; i++)
@@ -108,14 +108,14 @@ namespace Tupiniquim.ConsoleApp
                 }
             }
             Console.WriteLine("Digite a posição inicial do Robô 2 (Coordenada X + Y + Direção (N, S, L, O) separados por espaço. ex.: 0 0 N): ");
-            var posicaoInicial2 = Console.ReadLine();
+            var posicaoInicial2 = Console.ReadLine().ToUpper();
             char[] instrucoesPosicaoInicial2 = posicaoInicial2.ToCharArray();
 
             while (instrucoesPosicaoInicial2.Length != 5)
             {
                 Console.WriteLine("O formato inserido é inválido");
                 Console.WriteLine("Digite novamente a posição inicial do Robô 2 (Coordenada X + Y + Direção (N, S, L, O) separados por espaço. ex.: 0 0 N): ");
-                posicaoInicial2 = Console.ReadLine();
+                posicaoInicial2 = Console.ReadLine().ToUpper();
                 instrucoesPosicaoInicial2 = posicaoInicial2.ToCharArray();
             }
 
@@ -124,7 +124,7 @@ namespace Tupiniquim.ConsoleApp
             var bussola2 = instrucoesPosicaoInicial2[4].ToString();
 
             Console.WriteLine("Digite as instruções para o segundo robô: ");
-            var instrucoesRobo2 = Console.ReadLine();
+            var instrucoesRobo2 = Console.ReadLine().ToUpper();
             char[] listaInstrucoesRobo2 = instrucoesRobo2.ToCharArray();
 
             for (int index = 0; index < listaInstrucoesRobo2.Length; index++)
